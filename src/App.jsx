@@ -1,16 +1,20 @@
+import React, { Suspense, lazy } from 'react';
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Highlights from "./components/Highlights";
-import Footer from './components/Footer'
+
+const Hero = lazy(() => import('./components/Hero'));
+const Highlights = lazy(() => import('./components/Highlights'));
+const Footer = lazy(() => import('./components/Footer'));
 
 function App() {
     return (
         <>
             <main className="bg-black">
                 <Navbar />
-                <Hero />
-                <Highlights />
-                <Footer />
+                <Suspense fallback={<div>Loading...</div>}>
+                    <Hero />
+                    <Highlights />
+                    <Footer />
+                </Suspense>
             </main>
         </>
     );
