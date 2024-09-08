@@ -88,7 +88,7 @@ const Footer = () => {
                 </div>
 
                 <div className="flex flex-col md:flex-row md:justify-center items-center gap-5 mt-8 text-sm">
-                    <p>&copy; 2024 YourCompany. All rights reserved.</p>
+                    <p>&copy; 2024 Mohsin. All rights reserved.</p>
                     <p className="flex items-center">
                         Powered by
                         <FaApple className="inline-block text-2xl text-white ml-2" />
